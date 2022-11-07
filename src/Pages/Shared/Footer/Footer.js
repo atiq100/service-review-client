@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../../assets/logo.png'
+import logo from "../../../assets/logo.png";
 
 export const Footer = () => {
   return (
@@ -14,18 +14,16 @@ export const Footer = () => {
           >
             <img className="w-8" src={logo} alt="" />
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-            DOSOFY
+              DOSOFY
             </span>
           </a>
           <div className="mt-4 lg:max-w-sm">
             <p className="text-sm text-gray-800">
-            Founded in 2003, DOSOFY has
-had a highly accomplished,
+              Founded in 2003, DOSOFY has had a highly accomplished,
             </p>
             <p className="mt-4 text-sm text-gray-800">
-            uniquely experienced team of
-qualified executives in the fields of
-medicine.
+              uniquely experienced team of qualified executives in the fields of
+              medicine.
             </p>
           </div>
         </div>
