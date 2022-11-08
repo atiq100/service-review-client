@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import image from '../../assets/login/welcome.png'
 
 const SignUp = () => {
     return (
-        <div className='md:flex flex-col mx-16 items-center gap-4'>
+        <div className='flex lg:flex-row flex-col mx-16 items-center gap-4'>
         <div>
             <img className='w-3/4' src={image} alt="" />
         </div>
         <div className="md:w-1/2 w-full max-w-md p-4 rounded-md shadow sm:p-8  dark:text-gray-900">
 	<h2 className="mb-3 text-3xl font-semibold text-center">Sign Up</h2>
 	<p className="text-sm text-center dark:text-gray-400">Already have an account?
-		<a href="#" rel="noopener noreferrer" className="focus:underline hover:underline">Sign in here</a>
+		<Link to="/login" rel="noopener noreferrer" className="focus:underline hover:underline">Sign in here</Link>
 	</p>
 	<div className="my-6 space-y-4">
 		<button aria-label="Login with Google" type="button" className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-sky-400">

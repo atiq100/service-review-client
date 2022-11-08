@@ -62,12 +62,12 @@ export const Header = () => {
           </li>
           <li>
             <Link
-              href="/"
+              to="/login"
               className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-sky-500/100 hover:bg-sky-700/100 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
+              aria-label="Sign in"
+              title="Sign in"
             >
-              Sign up
+              Sign in
             </Link>
           </li>
         </ul>
@@ -170,12 +170,12 @@ export const Header = () => {
                     </li>
                     <li>
                       <Link
-                        href="/"
+                        to="/login"
                         className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-sky-500/100 hover:bg-sky-700/100 focus:shadow-outline focus:outline-none"
-                        aria-label="Sign up"
-                        title="Sign up"
+                        aria-label="Sign in"
+                        title="Sign in"
                       >
-                        Sign up
+                        Sign in
                       </Link>
                     </li>
                   </ul>
