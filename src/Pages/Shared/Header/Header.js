@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from '../../../assets/logo.png'
+import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const {user,logout} = useContext(AuthContext)
+
+  const handleLogout = ()=>{
+    logout()
+    .then( ()=> {})
+    .catch(error=>console.log(error))
+  }
 
   return (
     <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -61,14 +71,27 @@ export const Header = () => {
             </Link>
           </li>
           <li>
+           {
+            user?.uid ?
             <Link
-              to="/login"
-              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-sky-500/100 hover:bg-sky-700/100 focus:shadow-outline focus:outline-none"
-              aria-label="Sign in"
-              title="Sign in"
-            >
-              Sign in
-            </Link>
+            onClick={handleLogout}
+            to="/"
+            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-sky-500/100 hover:bg-sky-700/100 focus:shadow-outline focus:outline-none"
+            aria-label="Sign out"
+            title="Sign out"
+          >
+            Sign out
+          </Link>
+          :
+          <Link
+          to="/login"
+          className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-sky-500/100 hover:bg-sky-700/100 focus:shadow-outline focus:outline-none"
+          aria-label="Sign in"
+          title="Sign in"
+        >
+          Sign in
+        </Link>
+           }
           </li>
         </ul>
         <div className="lg:hidden">
