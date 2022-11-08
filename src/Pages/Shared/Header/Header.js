@@ -41,32 +41,49 @@ export const Header = () => {
           </li>
           <li>
             <Link
-              href="/"
-              aria-label="Our product"
-              title="Our product"
+              to="/services"
+              aria-label="services"
+              title="services"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-sky-500/100"
             >
-              Features
+              Services
             </Link>
+          </li>
+          
+          <li>
+           {
+            user?.uid &&
+            <Link
+            to="/myreview"
+            aria-label="Product pricing"
+            title="Product pricing"
+            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-sky-500/100"
+          >
+            My reviews
+          </Link>
+           }
+          </li>
+          <li>
+           {
+            user?.uid &&
+            <Link
+            to="/addservice"
+            aria-label="Product pricing"
+            title="Product pricing"
+            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-sky-500/100"
+          >
+            Add service
+          </Link>
+           }
           </li>
           <li>
             <Link
               href="/"
-              aria-label="Product pricing"
-              title="Product pricing"
+              aria-label="blog"
+              title="blog"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-sky-500/100"
             >
-              Pricing
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/"
-              aria-label="About us"
-              title="About us"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-sky-500/100"
-            >
-              About us
+              Blog
             </Link>
           </li>
           <li>
@@ -162,31 +179,47 @@ export const Header = () => {
                     <li>
                       <Link
                         href="/"
-                        aria-label="Our product"
-                        title="Our product"
+                        aria-label="services"
+                        title="services"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-sky-500/100"
                       >
-                        Features
+                        Services
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        href="/"
-                        aria-label="Product pricing"
-                        title="Product pricing"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-sky-500/100"
-                      >
-                        Pricing
-                      </Link>
-                    </li>
+           {
+            user?.uid &&
+            <Link
+            to="/myreview"
+            aria-label="Product pricing"
+            title="Product pricing"
+            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-sky-500/100"
+          >
+            My reviews
+          </Link>
+           }
+          </li>
+          <li>
+           {
+            user?.uid &&
+            <Link
+            to="/addservice"
+            aria-label="Product pricing"
+            title="Product pricing"
+            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-sky-500/100"
+          >
+            Add service
+          </Link>
+           }
+          </li>
                     <li>
                       <Link
-                        href="/"
-                        aria-label="About us"
-                        title="About us"
+                        href="/blog"
+                        aria-label="blog"
+                        title="blog"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-sky-500/100"
                       >
-                        About us
+                        Blog
                       </Link>
                     </li>
                     <li>
