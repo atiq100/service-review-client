@@ -10,7 +10,7 @@ const Home = () => {
         <div>
             <Hero></Hero>
             <Services></Services>
-            <Link to='/services' className='btn border-0  bg-sky-500/100 grid mt-4 mx-auto w-32'>See more</Link>
+            <Link to='/services' className='btn border-0  bg-sky-500/100 grid mt-4 mx-auto w-32 hover:bg-sky-700/100 focus:shadow-outline focus:outline-none'>See more</Link>
             <Banner></Banner>
             <Statistic></Statistic>
         </div>
