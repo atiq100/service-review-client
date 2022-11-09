@@ -1,0 +1,60 @@
+[
+    {
+        
+        "service_id": "01",
+        "title": "Oral Hygenist",
+        "img": "https://media.istockphoto.com/id/1329006509/photo/man-dentist-in-face-mask-and-glasses-doing-treatment.jpg?b=1&s=170667a&w=0&k=20&c=AXdR8Dp3hrLjosOSEIjmvg5y1zPaAVV6gjUgYPpwDQQ=",
+        "price": "20.00",
+        "description": "Hygienists offer a professional teeth cleaning service, a process called scaling and polishing. During the appointment your hygienist will carry out an initial dental hygiene examination. They will then:scaling teeth (at times under local anaesthetic),polishing teeth,applying topical fluoride and fissure sealants"
+        
+    },
+    {
+        
+        "service_id": "02",
+        "title": "Labratory Tests",
+        "img": "https://media.istockphoto.com/id/1346675635/photo/modern-medical-research-laboratory-portrait-of-latin-and-black-young-scientists-using.jpg?b=1&s=170667a&w=0&k=20&c=UmopokGx9iVuio-7v0MpN-U0aBJVkKZ1K5dQI1MyoSs=",
+        "price": "20.00",
+        "description": "DOSOFY's pathology services form an essential role within a wide range of multidisciplinary healthcare organisations.  The service is built on standards of excellence with a commitment to provide doctors and their patients with pathology of the highest quality.  The quality of results is of fundamental importance, and structured around accreditation and governance. Included Comprehensive, multidisciplinary pathology services,Specialist referrals from other laboratories.  "
+       
+    },
+    {
+        
+        "service_id": "05",
+        "title": "Health Lifestyle",
+        "img": "https://media.istockphoto.com/id/1369620247/photo/shot-of-a-doctor-examining-a-little-girl-with-a-stethoscope-in-a-clinic.jpg?b=1&s=170667a&w=0&k=20&c=1zH1_z_OKQuO5cnrAQeXZdLdRUleHOZSx-7WY667Ot8=",
+        "price": "200.00",
+        "description": "There’s a great need for this. While plenty of free information is available online, most of it is hard to trust. Websites are often trying to sell a specific product or a pill, or push an agenda for the people funding it. But real long-term health can’t easily be found in a pill. And nobody can outrun a bad habit.We aim to provide unbiased and evidence-based information, as well as free and inspiring tools to help improve your health. I am primarily funded by our users via an optional membership. And show no ads, sell no products, and take no industry money."
+        
+    },
+    {
+       
+        "service_id": "04",
+        "title": "Diet organization",
+        "img": "https://media.istockphoto.com/id/1367775038/photo/healthy-lifestyle-boy-at-a-nutritionist-appointment.jpg?b=1&s=170667a&w=0&k=20&c=gJYYggYiLYrdcmLIL4I1sHLRS7FV8x0lbRgrsUZ9awg=",
+        "price": "150.00",
+        "description": "Regaining your health in an unhealthy world requires thinking and acting differently. It requires putting your trust not in industry ads or dogma, but in science and nature. It means trusting in the surprising power of your own body to return to health, given the right environment and evidence-based lifestyle changes.My mission is to find the most trustworthy science and practical knowledge about health, make it inspiring and simple to use, and make it accessible and free for everyone. "
+       
+    },
+    {
+        
+        "service_id": "03",
+        "title": "Arythmia Treatment",
+        "img": "https://images.unsplash.com/photo-1579154491915-611e891d3a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8QXJ5dGhtaWElMjBUcmVhdG1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        "price": "30.00",
+        "description": "Treatment for heart arrhythmias depends on whether you have a fast heartbeat (tachycardia) or slow heartbeat (bradycardia). Some heart arrhythmias do not need treatment. Your doctor may recommend regular checkups to monitor your condition.Heart arrhythmia treatment is usually only needed if the irregular heartbeat is causing significant symptoms, or if the condition is putting you at risk of more-serious heart problems. Treatment for heart arrhythmias may include medications, therapies such as vagal maneuvers, cardioversion, catheter procedures or heart surgery."
+       
+    },
+    {
+        
+        "service_id": "06",
+        "title": "ECG Test",
+        "img": "https://media.istockphoto.com/id/1096502340/photo/scientists-working-in-the-laboratory.jpg?b=1&s=170667a&w=0&k=20&c=xD_lrYan7rlEGR9gM4CcN4PtPppwiMvVJtUmUUb7BxA=",
+        "price": "20.00",
+        "description": "Dosofy is a leading provider of ECG Testing services across  in and around Sylhet.In addition I also can offer a Home ECG monitor that can be sent out to you wherever you are in the Sylhet, and which still includes the full professional medical report.An ECG (electrocardiogram) is one of the most common heart tests which monitors your heart rate, rhythm and electrical activity. The test discovers any issues with the heart’s electrical impulses.ECG testing is completely safe and pain-free. It involves attaching a number of sticky electrodes or small sensors to the arms, legs and chest area." 
+
+        
+        
+         
+        
+    }
+]
