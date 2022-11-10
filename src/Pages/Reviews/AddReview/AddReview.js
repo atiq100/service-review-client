@@ -1,20 +1,24 @@
 import React, { useContext } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const AddReview = () => {
     const {user} = useContext(AuthContext)
+    const {_id} = useLoaderData()
 
     const handleFeedback=(event)=>{
         const name = user?.displayName;
         const comment = event.target.comment.value;
         const photo = user?.photoURL;
+        const email = user?.email
     
     const feedback={
         
-        
+        service_id:_id,
         reviewer: name,
         comment,
-        photo
+        photo,
+        email
     }
 
     fetch('http://localhost:5000/reviews',{
