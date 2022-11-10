@@ -4,7 +4,7 @@ import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const AddReview = () => {
     const {user} = useContext(AuthContext)
-    const {_id} = useLoaderData()
+    const {_id,title} = useLoaderData()
 
     const handleFeedback=(event)=>{
         const name = user?.displayName;
@@ -13,12 +13,13 @@ const AddReview = () => {
         const email = user?.email
     
     const feedback={
-        
+        lastModified: Date(),
         service_id:_id,
         reviewer: name,
         comment,
         photo,
-        email
+        email,
+        title
     }
 
     fetch('http://localhost:5000/reviews',{
