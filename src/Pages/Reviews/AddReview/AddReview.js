@@ -28,6 +28,8 @@ const AddReview = () => {
         method:'POST',
         headers:{
             'content-type': 'application/json',
+            authorization: `Bearer ${localStorage.getItem('doctor-token')}`
+            
             
         },
         body: JSON.stringify(feedback)

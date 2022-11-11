@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/useTitle';
 import ReviewRow from './ReviewRow';
@@ -7,17 +8,20 @@ const MyReview = () => {
     useTitle("myreview")
     const {user,logout}=useContext(AuthContext)
     const [reviews,setReviews] = useState([])
+    const storedReview = useLoaderData()
+    const [review,setReview] =useState(storedReview)
+    console.log(storedReview)
 
     useEffect(()=>{
         fetch(`https://b6a11-service-review-server-side-atiq100.vercel.app/reviews?email=${user?.email}`,{
-            // headers:{
-            //     authorization: `Bearer ${localStorage.getItem('token')}`
-            // }
+            headers:{
+                authorization: `Bearer ${localStorage.getItem('doctor-token')}`
+            }
         })//specific user tar order dekte
         .then(res=>{
-            // if(res.status === 401 || res.status === 403){
-            //    return logout()
-            // }
+            if(res.status === 401 || res.status === 403){
+               return logout()
+            }
             return res.json()
         })
         .then(data=>{
@@ -25,7 +29,7 @@ const MyReview = () => {
             
             
         })
-    },[user?.email])
+    },[user?.email,logout])
 
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure,you want to cancel this order');
@@ -33,9 +37,9 @@ const MyReview = () => {
             fetch(`https://b6a11-service-review-server-side-atiq100.vercel.app/reviews/${id}`,{
                 method:'DELETE',
                 
-                    // headers:{
-                    //     authorization: `Bearer ${localStorage.getItem('token')}`
-                    // }
+                    headers:{
+                        authorization: `Bearer ${localStorage.getItem('doctor-token')}`
+                    }
                 
             })
             .then(res=>res.json())
@@ -48,6 +52,42 @@ const MyReview = () => {
                 console.log(data);
             })
         }
+    }
+    // const handleUpdate = (event,id) =>{
+    //     event.preventDefault();
+    //     console.log(review);
+    //     fetch(`http://localhost:5000/reviews/${id}`,{
+    //         method:'PATCH',
+    //         headers: {
+    //             'content-type':'application/json'
+    //         },
+    //         body: JSON.stringify({comment:''})
+
+    //     })
+    //     .then(res=>res.json())
+    //     .then(data=>{
+    //         if(data.modifiedCount>0){
+    //             const remaining = reviews.filter(rev => rev._id !== id);
+    //             const approving = reviews.find(rev => rev._id === id);
+                
+
+    //             const newReview = [approving, ...remaining];
+    //             setReview(newReview)
+    //             alert('Review updated successfully')
+    //             event.target.reset()
+    //         }
+    //         //console.log(data);
+    //     })
+
+    // }
+    const handleInputChange = event=>{
+        const value = event.target.value;
+        const field = event.target.name;
+        const newReview = {...review}
+        newReview[field]=value;
+        setReview(newReview)
+        console.log(newReview);
+       
     }
     return (
     //     <>
@@ -81,6 +121,8 @@ const MyReview = () => {
                 key={review._id}
                 review={review}
                 handleDelete={handleDelete}
+                //handleUpdate={handleUpdate}
+                handleInputChange={handleInputChange}
                 //handleUpdateStatus={handleUpdateStatus}
                 ></ReviewRow>)
 }

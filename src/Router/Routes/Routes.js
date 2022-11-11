@@ -53,12 +53,16 @@ const router = createBrowserRouter([
             {
                 path:'/reviews/:id',
                 element:<Reviews></Reviews>,
-                loader:({params})=>fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader:({params})=>fetch(`https://b6a11-service-review-server-side-atiq100.vercel.app/reviews/${params.id}`)
             },
             {
                 path:'/myreview',
-                element:<PrivateRoute><MyReview></MyReview></PrivateRoute>
+                element:<PrivateRoute><MyReview></MyReview></PrivateRoute>,
+                
+                
             },
+            
+            
             {
                 path:'/blog',
                 element:<Blog></Blog>

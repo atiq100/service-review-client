@@ -22,6 +22,7 @@ const AddService = () => {
       method: "POST",
       headers: {
         "content-type": "application/json",
+        
       },
       body: JSON.stringify(service),
     })
@@ -41,7 +42,7 @@ const AddService = () => {
       <section className="p-6  dark:text-gray-50">
         <form
           onSubmit={handleAddService}
-          novalidate=""
+          
           className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid"
         >
           <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
