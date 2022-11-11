@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import Review from "../Review/Review";
 
 const Reviews = () => {
-  const { service_id, _id } = useLoaderData();
+  const {  _id } = useLoaderData();
 
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
@@ -17,7 +17,7 @@ const Reviews = () => {
   }, [_id]);
   return (
     <div className="">
-      <div className="grid gap-4 grid-cols-1  mx-20 justify-items-center">
+      <div className="grid gap-4 grid-cols-1 w-full mx-20 justify-items-center">
         {reviews.map((review) => (
           <Review key={review._id} review={review}></Review>
         ))}

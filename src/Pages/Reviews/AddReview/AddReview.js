@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const AddReview = () => {
@@ -45,10 +45,14 @@ const AddReview = () => {
 	
 		
 		<form onSubmit={handleFeedback}>
+            
         <div className="flex justify-between justify-items-center items-center w-full">
 			<textarea  placeholder="Message..." name='comment' className="p-4 h-16 mr-2 flex-grow rounded-md resize-none dark:text-gray-900 dark:bg-gray-100"></textarea>
+            {user?.uid  ?
 			<button type="submit" className="py-4 px-2 my-8 font-semibold rounded-md dark:text-gray-900 dark:bg-sky-400">Leave feedback</button>
+            : <span>please <Link to='/login' className='text-blue-400 underline-offset-1'>login </Link>to put feedback</span>}
 		</div>
+        
         </form>
 	
 	

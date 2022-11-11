@@ -45,7 +45,7 @@ const AddService = () => {
           <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
               <div className="col-span-full sm:col-span-3 ">
-                <label for="servicename" className="text-sm">
+                <label htmlFor="servicename" className="text-sm">
                   Service Name
                 </label>
                 <input
@@ -56,7 +56,7 @@ const AddService = () => {
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
-                <label for="price" className="text-sm">
+                <label htmlFor="price" className="text-sm">
                   Price
                 </label>
                 <input
@@ -67,7 +67,7 @@ const AddService = () => {
                 />
               </div>
               <div className="col-span-full sm:col-span-3 ">
-                <label for="image" className="text-sm">
+                <label htmlFor="image" className="text-sm">
                   Image Link
                 </label>
                 <input
@@ -78,7 +78,7 @@ const AddService = () => {
                 />
               </div>
               <div className="col-span-full">
-                <label for="Description" className="text-sm">
+                <label htmlFor="Description" className="text-sm">
                   Description
                 </label>
                 <textarea

@@ -3,9 +3,9 @@ import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const Review = ({review}) => {
     const {user} = useContext(AuthContext)
-    const {reviewer,comment,photo} = review;
+    const {reviewer,comment,lastModified} = review;
     return (
-        <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 dark:bg-gray-900 dark:text-gray-100">
+        <div className=" flex flex-col w-full  p-6 mx-auto divide-y rounded-md divide-gray-700 dark:bg-gray-100 dark:text-gray-900">
 	<div className="flex justify-between p-4">
 		<div className="flex space-x-4">
 			<div>
@@ -13,7 +13,7 @@ const Review = ({review}) => {
 			</div>
 			<div>
 				<h4 className="font-bold">{reviewer}</h4>
-				<span className="text-xs dark:text-gray-400">2 days ago</span>
+				<span className="text-xs dark:text-gray-400">{ lastModified.slice(0,15)}</span>
 			</div>
 		</div>
 		{/* <div className="flex items-center space-x-2 dark:text-yellow-500">
