@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/useTitle';
@@ -38,7 +39,7 @@ const AddReview = () => {
     .then(data=>{
         console.log(data)
         if(data.acknowledged){
-            alert('order placed successfully')
+            toast('review add successfully')
             comment.reset();
         }
     })
