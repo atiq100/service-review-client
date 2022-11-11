@@ -1,5 +1,6 @@
 import Main from "../../layout/Main";
 import AddService from "../../Pages/AddService/AddService";
+import { Blog } from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home/Home";
 import Services from "../../Pages/Home/Services/Services";
 import Login from "../../Pages/Login/Login";
@@ -37,17 +38,17 @@ const router = createBrowserRouter([
             {
                 path:'/service/:id',
                 element:<ServiceDetail></ServiceDetail>,
-                loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({params})=> fetch(`https://b6a11-service-review-server-side-atiq100.vercel.app/services/${params.id}`)
             },
             {
                 path:'/addservice',
                 element:<PrivateRoute><AddService></AddService></PrivateRoute>,
-                loader:()=>fetch('http://localhost:5000/services')
+                loader:()=>fetch('https://b6a11-service-review-server-side-atiq100.vercel.app/services')
             },
             {
                 path:'/service',
                 element:<AddReview></AddReview>,
-                loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({params})=> fetch(`https://b6a11-service-review-server-side-atiq100.vercel.app/services/${params.id}`)
             },
             {
                 path:'/reviews/:id',
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
             {
                 path:'/myreview',
                 element:<PrivateRoute><MyReview></MyReview></PrivateRoute>
+            },
+            {
+                path:'/blog',
+                element:<Blog></Blog>
             }
         ]
     }

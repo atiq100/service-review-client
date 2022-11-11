@@ -6,7 +6,7 @@ const HomeService = () => {
     const[loader,setLoader]=useState(true)
     const [services, setServices] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:5000/servicehome")
+      fetch("https://b6a11-service-review-server-side-atiq100.vercel.app/servicehome")
         .then((res) => res.json())
           
         .then((data) =>{

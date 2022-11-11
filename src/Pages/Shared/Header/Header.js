@@ -78,7 +78,7 @@ export const Header = () => {
           </li>
           <li>
             <Link
-              href="/"
+              to="/blog"
               aria-label="blog"
               title="blog"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-sky-500/100"
@@ -214,7 +214,7 @@ export const Header = () => {
           </li>
                     <li>
                       <Link
-                        href="/blog"
+                        to="/blog"
                         aria-label="blog"
                         title="blog"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-sky-500/100"

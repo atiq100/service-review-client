@@ -22,7 +22,7 @@ const AddReview = () => {
         title
     }
 
-    fetch('http://localhost:5000/reviews',{
+    fetch('https://b6a11-service-review-server-side-atiq100.vercel.app/reviews',{
         method:'POST',
         headers:{
             'content-type': 'application/json',

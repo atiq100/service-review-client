@@ -8,7 +8,7 @@ const MyReview = () => {
     const [reviews,setReviews] = useState([])
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`,{
+        fetch(`https://b6a11-service-review-server-side-atiq100.vercel.app/reviews?email=${user?.email}`,{
             // headers:{
             //     authorization: `Bearer ${localStorage.getItem('token')}`
             // }
@@ -29,7 +29,7 @@ const MyReview = () => {
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure,you want to cancel this order');
         if(proceed){
-            fetch(`http://localhost:5000/reviews/${id}`,{
+            fetch(`https://b6a11-service-review-server-side-atiq100.vercel.app/reviews/${id}`,{
                 method:'DELETE',
                 
                     // headers:{
@@ -41,7 +41,7 @@ const MyReview = () => {
             .then(data=>{
                 if(data.deletedCount > 0){
                     alert('deleted successfully')
-                    const remaining = reviews.filter(odr => odr._id !== id);
+                    const remaining = reviews.filter(rev => rev._id !== id);
                     setReviews(remaining)
                 }
                 console.log(data);
@@ -49,8 +49,8 @@ const MyReview = () => {
         }
     }
     return (
-        <>
-    {reviews?.length < 0 ? <p className='text-center text-xl text-red-500'>No reviews were added at the middle of the page</p> :
+    //     <>
+    // {reviews?.length < 0 ? <p className='text-center text-xl text-red-500'>No reviews were added at the middle of the page</p> :
         <div>
              <div className="container p-2 mx-auto sm:p-4 dark:text-gray-100">
                 
@@ -87,8 +87,8 @@ const MyReview = () => {
 		</table>
 	</div>
 </div>
-        </div>}
-        </>
+        </div>
+        
     );
 };
 

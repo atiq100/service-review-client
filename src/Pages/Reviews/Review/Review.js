@@ -3,13 +3,13 @@ import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const Review = ({review}) => {
     const {user} = useContext(AuthContext)
-    const {reviewer,comment,lastModified} = review;
+    const {reviewer,comment,lastModified,photo} = review;
     return (
         <div className=" flex flex-col w-full  p-6 mx-auto divide-y rounded-md divide-gray-700 dark:bg-gray-100 dark:text-gray-900">
 	<div className="flex justify-between p-4">
 		<div className="flex space-x-4">
 			<div>
-				<img src={user?.photoURL} alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
+				<img src={photo} alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
 			</div>
 			<div>
 				<h4 className="font-bold">{reviewer}</h4>
