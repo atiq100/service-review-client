@@ -68,3 +68,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Project Name
+# Dosofy
+## Description
+This website provides facility to review doctor services.
+## Funtionality
+- use firebase authentication (Google,Github,Email/Password)
+- user can see the services
+- without login user can not access premium content.
+- user can add,delete,update his review
+- user can add services after login
+- use jWT web token
+- User can view photo in full screen
+## Implementation Technology
+- HTML
+- Tailwind CSS
+- Javascript
+- React
+- for server site use express
+## Third Party Library
+- daisy ui
+- kitwind,mambaui
+- React Hot Toast
+- React Icon
+- react to pdf
+## Tools
+- Vs Code
+- firebase
+- vercel
