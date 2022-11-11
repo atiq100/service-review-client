@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../Hooks/useTitle';
 import Banner from '../Banner/Banner';
 import Hero from '../Hero/Hero';
 import Services from '../Services/Services';
@@ -7,6 +8,7 @@ import Statistic from '../Statistic/Statistic';
 import HomeService from './HomeService/HomeService';
 
 const Home = () => {
+    useTitle("home")
     return (
         <div>
             <Hero></Hero>

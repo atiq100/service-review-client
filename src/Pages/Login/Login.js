@@ -3,9 +3,11 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import image from '../../assets/login/welcome.png'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import useTitle from '../Hooks/useTitle';
 
 const Login = () => {
     const [error,setError] = useState('')
+    useTitle("login")
     const googleProvider = new GoogleAuthProvider()
     const {signIn,providerLogin} = useContext(AuthContext);
     const navigate = useNavigate();
